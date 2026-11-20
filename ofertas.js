@@ -22,7 +22,16 @@ window.ACHADOS_CATALOGO = [
       "jogos"
     ],
     "officialUrl": "https://www.rockstargames.com/VI",
-    "offers": []
+    "offers": [
+      {
+        "store": "ml",
+        "label": "Mercado Livre",
+        "title": "GTA VI — anúncio informado pelo responsável, versão e vendedor a conferir",
+        "url": "https://meli.la/11xMJVi",
+        "verification": "pending",
+        "note": "Destino do link encurtado não verificado externamente."
+      }
+    ]
   },
   {
     "id": "powerbank-10000-001",

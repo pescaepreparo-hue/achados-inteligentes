@@ -70,7 +70,16 @@ window.ACHADOS_CATALOGO = [
         "url": "https://www.youtube.com/watch?v=tJbzMqJGH4k",
         "credit": "Rockstar Games"
       }
-    ]
+    ],
+    "featured": {
+      "priority": 1,
+      "kicker": "LANÇAMENTO MAIS AGUARDADO • 19 NOV 2026",
+      "headline": "GTA 6 chegou!<br>Explore Vice City.",
+      "subtitle": "Grand Theft Auto VI para PS5. Veja o anúncio cadastrado no Mercado Livre e confira a edição antes de comprar.",
+      "button": "Conhecer GTA 6",
+      "heroImage": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/f7eab33a4989ce5f0cd89c70723909b3.jpg",
+      "credit": "Arte oficial: Rockstar Games"
+    }
   },
   {
     "id": "powerbank-10000-001",
@@ -101,7 +110,15 @@ window.ACHADOS_CATALOGO = [
       }
     ],
     "images": [],
-    "videos": []
+    "videos": [],
+    "featured": {
+      "priority": 2,
+      "kicker": "DESTAQUE • TECNOLOGIA",
+      "headline": "Energia extra<br>onde você estiver.",
+      "subtitle": "Mini Power Bank 10.000 mAh: consulte os links cadastrados para Mercado Livre e Shopee.",
+      "button": "Comparar Power Bank",
+      "credit": "Imagem ilustrativa"
+    }
   },
   {
     "id": "controle-dualsense-ps5",
@@ -119,7 +136,15 @@ window.ACHADOS_CATALOGO = [
     ],
     "offers": [],
     "images": [],
-    "videos": []
+    "videos": [],
+    "featured": {
+      "priority": 3,
+      "kicker": "SELEÇÃO GAMER • ACESSÓRIOS",
+      "headline": "Seu setup<br>merece atenção.",
+      "subtitle": "Controle sem fio DualSense para PS5: conheça o produto enquanto preparamos os links das lojas.",
+      "button": "Ver DualSense",
+      "credit": "Imagem ilustrativa"
+    }
   },
   {
     "id": "headset-hyperx-stinger-2",

@@ -37,6 +37,30 @@
 @media(max-width:650px){.categories{grid-template-columns:repeat(2,minmax(0,1fr));gap:10px}.cat-scene{height:145px}.cat-info{padding:12px 10px}.cat-label{font-size:12px}.cat-hint{font-size:10px}.cat-action-tag{font-size:10px}}
 @media(max-width:370px){.categories{grid-template-columns:repeat(2,minmax(0,1fr))}.cat-scene{height:125px}}
 @media(prefers-reduced-motion:reduce){.cat-img,.cat-action-tag{transition:none}}
+
+/* Galeria de mídia: fotos oficiais/autorizadas, com crédito e origem */
+.product-image.has-media{cursor:pointer;overflow:hidden}.product-image.has-media>img{width:100%;height:100%;object-fit:cover;display:block;transition:transform .3s ease}
+.product-image.has-media:hover>img{transform:scale(1.045)}.product-image.has-media .pill{z-index:2}
+.gallery-btn{border:1px solid #d7e2f7;background:#fff;color:#3159b0;font-weight:800;border-radius:9px;padding:10px;margin-top:10px;font-size:12px}
+.gallery-btn:hover{background:#eef4ff}
+.media-dialog{width:min(860px,calc(100% - 24px));max-height:94dvh;padding:0;border:0;border-radius:20px;background:#fff;color:#15223b;box-shadow:0 24px 80px #0005;overflow-y:auto}
+.media-dialog::backdrop{background:#071126bf}
+.media-dialog-head{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:16px 20px;border-bottom:1px solid #e5ebf5;position:sticky;top:0;background:#fff;z-index:2}
+.media-dialog-head h2{font-size:17px;margin:0;line-height:1.3}.media-close{background:#edf2ff;color:#1e3d87;border:0;border-radius:9px;width:38px;height:38px;font-size:23px}
+.media-dialog-content{padding:16px 20px 22px}
+.media-main{min-height:250px;background:#e9edf4;border-radius:12px;display:grid;place-items:center;position:relative;overflow:hidden}
+.media-main img{display:block;width:100%;max-height:54dvh;object-fit:contain}
+.media-fail{position:absolute;inset:0;display:none;align-items:center;justify-content:center;text-align:center;padding:20px;color:#4b5c7e;background:#e9edf4}
+.media-thumbs{display:flex;gap:9px;overflow-x:auto;padding:12px 0 2px}
+.media-thumb{min-width:83px;width:83px;height:65px;border:2px solid transparent;border-radius:10px;background:#e9edf6;padding:2px;cursor:pointer;overflow:hidden}
+.media-thumb.selected{border-color:#2563eb}
+.media-thumb img{width:100%;height:100%;object-fit:cover;border-radius:6px}
+.media-credit{font-size:12px;color:#687995;line-height:1.55;margin:12px 0}
+.media-credit a{color:#285dcb;text-decoration:underline}
+.media-videos{border-top:1px solid #e5eaf3;margin-top:14px;padding-top:13px;display:grid;gap:8px}
+.media-videos h3{font-size:15px;margin:0}
+.media-videos a{display:block;padding:11px 14px;border-radius:9px;background:#eef3fd;color:#1a4c9f;font-weight:800;font-size:13px}
+@media(max-width:600px){.media-dialog-content{padding:10px 12px 20px}.media-dialog-head{padding:12px}.media-main{min-height:200px}.media-thumb{min-width:70px;width:70px;height:57px}}
 </style></head><body>
 <div class="utility"><div class="container"><span>✦ Achados selecionados para você comparar melhor</span><span>Mercado Livre • Shopee • Mais lojas em breve</span></div></div>
 <header class="header"><div class="container"><div class="header-main"><a class="brand" href="#inicio"><span class="brand-icon">✦</span><span>achados<br><b>inteligentes.</b></span></a><form class="search" id="searchForm"><input id="searchInput" type="search" placeholder="O que você está procurando hoje?" aria-label="Pesquisar produto"><button type="submit">⌕ Buscar</button></form><div class="header-side"><strong>🔎 Compare antes de comprar</strong>Encontre oportunidades em um só lugar</div></div><nav class="nav"><a href="#inicio">Início</a><a href="#categorias">Categorias</a><a href="#ofertas" class="hot">🔥 Produtos em destaque</a><a href="#comparador">🔥 Disputa de Preço</a><a href="#como-funciona">Como funciona</a></nav></div></header>
@@ -49,12 +73,63 @@
 <section class="section" id="como-funciona"><div class="section-head"><div><h2>Comprar bem ficou mais simples</h2><p>Três passos para descobrir oportunidades.</p></div></div><div class="how"><div><span class="icon">🔍</span><strong>1. Procure seu produto</strong><p>Pesquise por nome, modelo ou categoria. A busca ajudará você a encontrar opções relacionadas.</p></div><div><span class="icon">🔥</span><strong>2. Dispute os preços</strong><p>Veja links cadastrados e confira o preço, frete e disponibilidade diretamente na loja.</p></div><div><span class="icon">🛒</span><strong>3. Compre no marketplace</strong><p>Escolha uma oferta e finalize a compra diretamente no Mercado Livre, Shopee ou outra loja integrada.</p></div></div></section>
 <section class="newsletter"><div><h2>Os melhores achados merecem ser compartilhados.</h2><p>Em breve: ofertas compartilháveis, alertas de preço e versão instalável no celular.</p></div><button onclick="document.querySelector('#ofertas').scrollIntoView({behavior:'smooth'})">Explorar catálogo →</button></section></div></main>
 <footer class="footer"><div class="container"><div class="footer-grid"><div><strong>✦ Achados Inteligentes</strong><p>Compare, descubra, economize. Plataforma independente de curadoria e comparação de ofertas. O site poderá receber comissão quando uma compra elegível for realizada por meio de links de afiliado, sem custo adicional para o consumidor.</p></div><div><strong>Transparência</strong><p>Vitrine inicial com 10 produtos selecionados. Somente o Mini Power Bank possui links cadastrados anteriormente; os demais aguardam links reais de afiliado. Não somos representantes oficiais dos marketplaces.</p></div></div><small>© 2026 Achados Inteligentes. Projeto independente. · <a href="/sobre.html" style="text-decoration:underline">Sobre e transparência</a> · <a href="/privacidade.html" style="text-decoration:underline">Privacidade</a></small></div></footer>
+<dialog class="media-dialog" id="mediaDialog" aria-labelledby="mediaDialogTitle">
+  <div class="media-dialog-head"><h2 id="mediaDialogTitle">Fotos do produto</h2><button type="button" class="media-close" id="mediaClose" aria-label="Fechar galeria">×</button></div>
+  <div class="media-dialog-content">
+    <div class="media-main"><img id="mediaMainImg" alt="" loading="eager"><div id="mediaFail" class="media-fail">Imagem temporariamente indisponível. Consulte a fonte original.</div></div>
+    <div id="mediaThumbnails" class="media-thumbs" aria-label="Selecionar fotografia"></div>
+    <p id="mediaCredit" class="media-credit"></p>
+    <div id="mediaVideos" class="media-videos"></div>
+  </div>
+</dialog>
 <script src="/ofertas.js"></script>
 <script>
 const catalog={casa:['Organizador de gavetas','Potes herméticos','Luminária LED','Kit organizador de cozinha','Suporte de banheiro','Jogo de almofadas','Porta-temperos','Escorredor de louças'],eletronicos:['Fone Bluetooth','Carregador USB-C','Suporte para notebook','Smartwatch','Power bank','Mouse sem fio','Caixa de som portátil','Tripé para celular'],beleza:['Espelho LED','Kit de pincéis','Necessaire','Escova de cabelo','Touca de cetim','Organizador de maquiagem'],moda:['Tênis casual','Bolsa transversal','Óculos de sol','Boné básico','Carteira compacta','Relógio casual'],pet:['Bebedouro pet','Brinquedo para cães'],ferramentas:['Kit de chaves','Lanterna LED']};
 const icons={casa:['🗄️','🥫','💡','🍴','🛁','🛋️','🧂','🍽️'],eletronicos:['🎧','🔌','💻','⌚','🔋','🖱️','🔊','📸'],beleza:['🪞','💄','👜','🪮','🎀','💅'],moda:['👟','👜','🕶️','🧢','👛','⌚'],pet:['🐶','🐾'],ferramentas:['🧰','🔦']};
 const items=(window.ACHADOS_CATALOGO||[]).map(p=>({cat:p.category,name:p.title,icon:p.emoji,keywords:p.keywords||[]}));
 let activeCat='todos',activeStore='todos';const grid=document.getElementById('products'),empty=document.getElementById('empty'),searchInput=document.getElementById('searchInput');
+
+function getMediaImages(p){
+ return (Array.isArray(p?.images)?p.images:[]).filter(m=>{
+   if(!m||typeof m.src!=='string')return false;
+   try{return new URL(m.src).protocol==='https:'}catch{return false}
+ });
+}
+const mediaDialog=document.getElementById('mediaDialog');
+document.getElementById('mediaClose').addEventListener('click',()=>mediaDialog.close());
+mediaDialog.addEventListener('click',e=>{if(e.target===mediaDialog)mediaDialog.close()});
+function openMediaGallery(product){
+ const photos=getMediaImages(product);
+ if(!photos.length)return;
+ const main=document.getElementById('mediaMainImg'),fail=document.getElementById('mediaFail');
+ const thumbs=document.getElementById('mediaThumbnails'),credit=document.getElementById('mediaCredit');
+ const videos=document.getElementById('mediaVideos');
+ document.getElementById('mediaDialogTitle').textContent=product.title+' — galeria';
+ thumbs.replaceChildren();videos.replaceChildren();
+ function select(i){
+   const item=photos[i];fail.style.display='none';main.style.display='block';
+   main.src=item.src;main.alt=item.alt||product.title;
+   credit.replaceChildren();
+   credit.append(document.createTextNode('Imagem '+(i+1)+' de '+photos.length+' • Fonte: '+(item.credit||'material informado pelo administrador')+' • '));
+   if(item.source&&/^https:\/\//.test(item.source)){
+     const link=document.createElement('a');link.href=item.source;link.target='_blank';link.rel='noopener noreferrer';link.textContent='Ver origem oficial ↗';credit.append(link);
+   }
+   thumbs.querySelectorAll('button').forEach((x,j)=>{x.classList.toggle('selected',i===j);x.setAttribute('aria-pressed',i===j?'true':'false')});
+ }
+ main.onerror=()=>{fail.style.display='flex';main.style.display='none'};
+ photos.forEach((p,i)=>{
+   const b=document.createElement('button');b.type='button';b.className='media-thumb';b.setAttribute('aria-label','Ver imagem '+(i+1));
+   const img=document.createElement('img');img.src=p.src;img.alt=p.alt||'Miniatura '+(i+1);img.loading='lazy';b.append(img);
+   b.addEventListener('click',()=>select(i));thumbs.append(b);
+ });
+ const clips=(Array.isArray(product.videos)?product.videos:[]).filter(v=>{try{return new URL(v.url).protocol==='https:'}catch{return false}});
+ if(clips.length){
+   const heading=document.createElement('h3');heading.textContent='🎬 Vídeos oficiais';videos.append(heading);
+   for(const v of clips){const link=document.createElement('a');link.href=v.url;link.target='_blank';link.rel='noopener noreferrer';link.textContent='▶ '+v.title+' ↗';videos.append(link)}
+ }
+ select(0);
+ if(!mediaDialog.open)mediaDialog.showModal();
+}
 function render(){
  const q=normalizeSearch(searchInput.value),all=window.ACHADOS_CATALOGO||[];
  const filtered=all.filter(p=>(activeCat==='todos'||p.category===activeCat)
@@ -66,12 +141,23 @@ function render(){
   const card=document.createElement('article');card.className='product'+(p.id==='gta-vi-ps5'?' game-featured':'');
   const visual=document.createElement('div');visual.className='product-image';
   const pill=document.createElement('span');pill.className='pill';pill.textContent=ready?(p.offers.some(o=>o.verification==='pending')?'LINK EM VERIFICAÇÃO':'LINKS CADASTRADOS'):(p.badge||'AGUARDANDO LINK');
-  const emoji=document.createElement('span');emoji.className='emoji';emoji.textContent=p.emoji||'🛍️';visual.append(pill,emoji);
+  visual.append(pill);
+  const validImages=getMediaImages(p);
+  if(validImages.length){
+    visual.classList.add('has-media');visual.setAttribute('role','button');visual.tabIndex=0;visual.setAttribute('aria-label','Ver galeria de fotos de '+p.title);
+    const image=document.createElement('img');image.src=validImages[0].src;image.alt=validImages[0].alt||p.title;image.loading='lazy';image.decoding='async';
+    image.addEventListener('error',()=>{image.remove();const fallback=document.createElement('span');fallback.className='emoji';fallback.textContent=p.emoji||'🛍️';visual.append(fallback)});
+    visual.append(image);
+    visual.addEventListener('click',()=>openMediaGallery(p));
+    visual.addEventListener('keydown',e=>{if(e.key==='Enter'||e.key===' '){e.preventDefault();openMediaGallery(p)}});
+  }else{
+    const emoji=document.createElement('span');emoji.className='emoji';emoji.textContent=p.emoji||'🛍️';visual.append(emoji);
+  }
   const body=document.createElement('div');body.className='product-content';
   const title=document.createElement('h3');title.textContent=p.title;
   const desc=document.createElement('p');desc.textContent=p.description;
   const status=document.createElement('div');status.className='status';status.textContent=ready?(p.offers.some(o=>o.verification==='pending')?'Link informado pelo responsável; anúncio, edição e comissão ainda não verificados. Confira antes de comprar.':'Preço e frete devem ser conferidos na loja'):'Produto cadastrado, link de afiliado ainda pendente';
-  body.append(title,desc,status);
+  body.append(title,desc,status);if(validImages.length){const gallery=document.createElement('button');gallery.type='button';gallery.className='gallery-btn';const clips=Array.isArray(p.videos)?p.videos.length:0;gallery.textContent='📷 Ver '+validImages.length+' fotos'+(clips?' e vídeos oficiais':'');gallery.addEventListener('click',()=>openMediaGallery(p));body.append(gallery)}
   if(ready){
    const btn=document.createElement('button');btn.type='button';btn.className='product-btn';btn.textContent='Ver link e detalhes →';btn.addEventListener('click',()=>startDuel(p.title));body.append(btn);
   }else if(p.officialUrl){

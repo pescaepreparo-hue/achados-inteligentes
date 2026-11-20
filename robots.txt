@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://achados-inteligentes.netlify.app/sitemap.xml

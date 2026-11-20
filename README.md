@@ -11,7 +11,7 @@
 
 - Interface V9 com categorias interativas, busca, responsividade e Disputa de Preço.
 - Arquivo `ofertas.js` com produtos e links cadastrados, separado do HTML.
-- 10 produtos selecionados na vitrine. GTA VI (lançado em 19/11/2026) aparece em destaque na categoria Games e Consoles.\n- Produto-piloto: Mini Power Bank 10.000 mAh, único com dois links informados anteriormente, um Mercado Livre e um Shopee.
+- 10 produtos selecionados na vitrine. GTA VI (lançado em 19/11/2026) aparece em destaque na categoria Games e Consoles.\n- Produto-piloto: Mini Power Bank 10.000 mAh, com dois links informados anteriormente, um Mercado Livre e um Shopee.
 - Grade distingue **LINKS CADASTRADOS** (compra possível na loja) de **AGUARDANDO LINK DE AFILIADO** (sem vendedor/preço confirmado).
 - Painel de comparação lê o produto cadastrado e separa filtros ML, Shopee e disputas por loja.
 - Páginas `sobre.html`, `privacidade.html`, `robots.txt`, `sitemap.xml`.
@@ -25,7 +25,7 @@ Edite `ofertas.js`: para cada produto, crie objeto com `id`, `title`, `category`
 ## Pendências comerciais para lançamento
 
 1. Conferir se os dois links cadastrados ainda funcionam e correspondem à conta de afiliado correta.
-2. Inserir links reais dos programas de afiliados nos 9 produtos que ainda não os possuem (não inventar preço, vendedor ou estoque).
+2. Inserir links reais dos programas de afiliados nos 8 produtos que ainda não os possuem e verificar o link recém-informado para GTA 6 (não inventar preço, vendedor ou estoque).
 3. Validar regras de uso de imagens, marcas, conteúdo e parâmetros de afiliados dos marketplaces.
 4. Se desejar comparação numérica automática, implementar dados de preços/frete por fonte autorizada. A V10 **não consulta preços em tempo real**, não identifica menor preço e não possui backend.
 5. Definir e publicar canal de contato e revisar a política de privacidade com a operação real.
@@ -45,7 +45,7 @@ A versão técnica está pronta para demonstração e inclusão de ofertas; só 
 
 ## Produtos da primeira seleção
 
-1. Grand Theft Auto VI (GTA 6) — PlayStation 5 (Games; link oficial não comissionado, aguardando links afiliados)
+1. Grand Theft Auto VI (GTA 6) — PlayStation 5 (Games; link Mercado Livre https://meli.la/11xMJVi informado pelo responsável, sem confirmação do anúncio nem atribuição de comissão)
 2. Mini Power Bank 10.000 mAh (Eletrônicos; dois links já cadastrados e pendentes de validação)
 3. Controle sem fio DualSense — PS5 (Games)
 4. Headset gamer HyperX Cloud Stinger 2 (Games)
@@ -57,3 +57,10 @@ A versão técnica está pronta para demonstração e inclusão de ofertas; só 
 10. Kit de potes herméticos (Casa)
 
 **Cadastro não equivale a oferta comercial comissionada.** Para emitir links do Mercado Livre, use o gerador de links dentro da conta de afiliados, a partir da página específica do produto. Para Shopee, utilize a área de afiliados aprovada. Não atribuir comissão a links de busca genéricos.
+
+## Atualização de 20/11/2026 — GTA VI
+
+- Link Mercado Livre recebido para GTA VI: `https://meli.la/11xMJVi`.
+- O destino final do link abreviado não pôde ser validado automaticamente. A interface avisa **link em verificação** e mantém a referência de checagem de plataforma, mídia e vendedor.
+- Não considerar comissão garantida antes de confirmar o link no painel do afiliado e testar a atribuição.
+- Agora dois produtos possuem links informados (GTA VI e Power Bank); oito ainda aguardam links de afiliados.

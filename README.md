@@ -43,6 +43,17 @@ Edite `ofertas.js`: para cada produto, crie objeto com `id`, `title`, `category`
 
 A versão técnica está pronta para demonstração e inclusão de ofertas; só considere **concluído o lançamento comercial** quando houver links válidos, testes de rastreamento, publicação pública e conteúdo verificado.
 
+## Banner principal — destaques editoriais
+
+O banner inicial agora traz **GTA VI** com arte oficial da Rockstar Games e faz a rotação dos produtos escolhidos no catálogo:
+1. GTA VI (lançamento em 19/11/2026) — destaque prioritário, botão abre a comparação/cadastro do produto;
+2. Mini Power Bank 10.000 mAh — produto com dois links enviados anteriormente;
+3. Controle DualSense PS5 — produto relevante para a categoria Games, ainda sem link de afiliado.
+
+As duas chamadas laterais levam diretamente aos detalhes de Power Bank e DualSense. A seleção é controlada pelo atributo `featured` de cada item no `ofertas.js` (ordem `featured.priority`; textos, botão, imagem oficial opcional, crédito). Novos lançamentos entram no banner ajustando esses dados, sem alterar o HTML. A rotação respeita a preferência por movimento reduzido. Não anunciar como oferta verificada antes de validar o link e o preço.
+
+O uso de imagens oficiais da Rockstar deve observar os termos do titular e as regras dos programas de afiliados. A imagem do banner é carregada do CDN da Rockstar e pode deixar de funcionar se a origem mudar.
+
 ## Produtos da primeira seleção
 
 1. Grand Theft Auto VI (GTA 6) — PlayStation 5 (Games; link Mercado Livre https://meli.la/11xMJVi informado pelo responsável, sem confirmação do anúncio nem atribuição de comissão)

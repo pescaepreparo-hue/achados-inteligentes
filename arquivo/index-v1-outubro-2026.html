@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Achados Inteligentes — Ofertas selecionadas</title>
+<style>
+:root { color-scheme: light dark; --bg: light-dark(#f5f7fb,#10141d); --surface: light-dark(#ffffff,#1a2130); --surface2: light-dark(#edf2f8,#222b3d); --text: light-dark(#172033,#f2f5fb); --muted: light-dark(#647087,#aab4c7); --border: light-dark(#dce3ed,#303b50); --accent: light-dark(#2563eb,#7aa2ff); --accent2: light-dark(#e9f0ff,#25365d); --green: light-dark(#087f5b,#5ce0b1); }
+* { box-sizing: border-box; }
+body { margin: 0; font-family: Inter, ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif; background: var(--bg); color: var(--text); }
+#app { min-height: 100vh; width: 100%; background: var(--bg); }
+a { color: inherit; text-decoration: none; }
+.topbar { border-bottom: 1px solid var(--border); background: var(--surface); }
+.nav { max-width: 1160px; margin: auto; padding: 18px 22px; display: flex; justify-content: space-between; align-items: center; gap: 16px; }
+.brand { display: flex; align-items: center; gap: 11px; font-weight: 850; letter-spacing: -.04em; font-size: 1.2rem; }
+.brandmark { width: 40px; height: 40px; display: grid; place-items: center; border-radius: 13px; background: #2563eb; color: white; font-size: 1.3rem; }
+.navnote { color: var(--muted); font-size: .88rem; }
+.hero { max-width: 1160px; margin: auto; padding: 52px 22px 30px; display: grid; grid-template-columns: 1.3fr .7fr; gap: 28px; align-items: center; }
+.eyebrow { color: var(--accent); font-size: .78rem; font-weight: 800; text-transform: uppercase; letter-spacing: .13em; }
+h1 { font-size: clamp(2.25rem,5vw,4.15rem); letter-spacing: -.055em; line-height: 1.02; margin: 13px 0 18px; max-width: 700px; }
+.hero p { color: var(--muted); font-size: 1.08rem; line-height: 1.65; max-width: 620px; margin: 0 0 24px; }
+.searchbox { display: flex; gap: 9px; max-width: 570px; }
+.searchbox input { min-width: 0; flex: 1; border: 1px solid var(--border); border-radius: 13px; background: var(--surface); color: var(--text); padding: 14px 15px; font-size: 1rem; outline-color: var(--accent); }
+.searchbox button, .primary { border: 0; border-radius: 13px; background: var(--accent); color: white; padding: 13px 17px; font-weight: 800; cursor: pointer; }
+.hero-art { min-height: 270px; border-radius: 28px; padding: 24px; background: linear-gradient(135deg,#183b87,#3978ee 58%,#8db4ff); color: white; display: flex; flex-direction: column; justify-content: space-between; overflow: hidden; position: relative; }
+.hero-art:after { content: ""; width: 230px; height: 230px; position: absolute; right: -50px; top: 18px; border: 30px solid rgba(255,255,255,.16); border-radius: 50%; }
+.artlabel { font-size: .8rem; letter-spacing: .12em; text-transform: uppercase; font-weight: 800; opacity: .86; }
+.artbig { font-size: 2.6rem; line-height: 1.03; font-weight: 900; letter-spacing: -.06em; max-width: 270px; position: relative; z-index: 1; }
+.artfoot { font-size: .9rem; opacity: .9; position: relative; z-index: 1; }
+.notice { max-width: 1160px; margin: 0 auto 20px; padding: 0 22px; }
+.notice-inner { background: var(--accent2); border: 1px solid var(--border); padding: 13px 16px; border-radius: 13px; color: var(--muted); font-size: .88rem; line-height: 1.5; }
+.section { max-width: 1160px; margin: auto; padding: 24px 22px 52px; }
+.sectionhead { display: flex; align-items: end; justify-content: space-between; gap: 18px; margin-bottom: 20px; }
+h2 { margin: 0; font-size: clamp(1.5rem,3vw,2.15rem); letter-spacing: -.04em; }
+.sectionhead p { color: var(--muted); margin: 7px 0 0; }
+.filters { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 22px; }
+.filter { border: 1px solid var(--border); background: var(--surface); color: var(--text); padding: 9px 13px; border-radius: 999px; cursor: pointer; font-weight: 700; font-size: .88rem; }
+.filter.active { background: var(--accent); color: white; border-color: var(--accent); }
+.grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: 17px; }
+.card { border: 1px solid var(--border); background: var(--surface); border-radius: 19px; padding: 17px; display: flex; flex-direction: column; min-width: 0; transition: transform .15s ease, border-color .15s ease; }
+.card:hover { transform: translateY(-3px); border-color: var(--accent); }
+.productvisual { min-height: 145px; border-radius: 13px; background: var(--surface2); display: grid; place-items: center; font-size: 4.2rem; margin-bottom: 16px; }
+.badge { align-self: flex-start; color: var(--green); background: color-mix(in srgb, var(--green) 12%, transparent); border-radius: 7px; padding: 5px 8px; font-size: .72rem; font-weight: 850; text-transform: uppercase; letter-spacing: .05em; }
+.card h3 { font-size: 1.1rem; line-height: 1.3; margin: 11px 0 8px; letter-spacing: -.02em; }
+.card p { color: var(--muted); font-size: .9rem; line-height: 1.5; margin: 0 0 15px; flex: 1; }
+.card .cta { display: block; text-align: center; background: var(--accent2); color: var(--accent); padding: 12px; border-radius: 11px; font-weight: 850; border: 1px solid var(--border); }
+.card .cta:hover { background: var(--accent); color: white; }
+.empty { display: none; padding: 28px; text-align: center; border: 1px dashed var(--border); border-radius: 15px; color: var(--muted); }
+.how { background: var(--surface); border-top: 1px solid var(--border); border-bottom: 1px solid var(--border); }
+.howinner { max-width: 1160px; margin: auto; padding: 38px 22px; display: grid; grid-template-columns: repeat(3,1fr); gap: 20px; }
+.step { padding: 18px; border: 1px solid var(--border); border-radius: 16px; }
+.stepnum { width: 33px; height: 33px; display: grid; place-items: center; border-radius: 10px; background: var(--accent2); color: var(--accent); font-weight: 900; margin-bottom: 12px; }
+.step h3 { margin: 0 0 8px; }
+.step p { color: var(--muted); line-height: 1.55; margin: 0; font-size: .92rem; }
+footer { max-width: 1160px; margin: auto; padding: 27px 22px 36px; color: var(--muted); font-size: .82rem; line-height: 1.6; }
+footer strong { color: var(--text); }
+@media (max-width: 800px) { .hero { grid-template-columns: 1fr; padding-top: 36px; } .hero-art { min-height: 210px; } .grid { grid-template-columns: repeat(2,minmax(0,1fr)); } .howinner { grid-template-columns: 1fr; } }
+@media (max-width: 520px) { .nav { padding: 14px 16px; } .navnote { display: none; } .hero, .section, .notice, .howinner, footer { padding-left: 16px; padding-right: 16px; } .searchbox { flex-direction: column; } .grid { grid-template-columns: 1fr; } .productvisual { min-height: 125px; } }
+</style>
+</head>
+<body>
+<div id="app">
+<header class="topbar"><div class="nav"><div class="brand"><div class="brandmark">✦</div><span>Achados Inteligentes</span></div><div class="navnote">Seleção prática para comprar melhor</div></div></header>
+<main>
+<section class="hero">
+<div><div class="eyebrow">Curadoria por procura e comissão</div><h1>Achados que <span style="color:var(--accent)">valem o clique</span>.</h1><p>Compare recomendações do Mercado Livre e da Shopee. Nosso foco é selecionar produtos com procura comprovada, boa avaliação e comissão elegível dentro da sua meta.</p><div class="searchbox"><input id="search" type="search" placeholder="Buscar produtos ou categorias…" aria-label="Buscar produtos"><button id="searchBtn">Buscar</button></div></div>
+<div class="hero-art"><div class="artlabel">Curadoria de produtos</div><div class="artbig">Menos dúvida.<br>Mais escolha.</div><div class="artfoot">Recomendações organizadas por categoria</div></div>
+</section>
+<div class="notice"><div class="notice-inner"><strong>Transparência:</strong> este site pode conter links de afiliado do Mercado Livre e da Shopee. Se você comprar por um link elegível, poderemos receber uma comissão, sem custo adicional para você. Os produtos e links abaixo são demonstrativos. A faixa desejada de 12% a 22% será usada como critério de seleção, mas a comissão real depende do produto, da campanha, da categoria e das regras de cada plataforma; ela precisa ser confirmada no painel do afiliado antes da publicação.</div></div>
+<section class="section" id="recomendados"><div class="sectionhead"><div><h2>Explore as recomendações</h2><p>Escolha uma categoria ou pesquise pelo que você precisa.</p></div></div>
+<div class="filters" role="group" aria-label="Filtrar por categoria"><button class="filter active" data-category="todos">Todos os 120</button><button class="filter" data-category="casa">Casa e decoração</button><button class="filter" data-category="eletronicos">Eletrônicos e celulares</button><button class="filter" data-category="beleza">Beleza e cuidados</button><button class="filter" data-category="moda">Moda e acessórios</button></div>
+<div class="grid" id="productGrid"></div><div class="empty" id="empty">Nenhum item encontrado. Tente outra busca ou categoria.</div>
+</section>
+<section class="how"><div class="howinner"><div class="step"><div class="stepnum">1</div><h3>Encontrar procura real</h3><p>Pesquisar tendências, perguntas frequentes e termos de compra; validar interesse antes de escolher os produtos.</p></div><div class="step"><div class="stepnum">2</div><h3>Filtrar pela comissão</h3><p>Priorizar itens com comissão confirmada entre 12% e 22%, boa avaliação, preço competitivo e estoque disponível. A taxa não é garantida em todas as categorias.</p></div><div class="step"><div class="stepnum">3</div><h3>Atrair visitas qualificadas</h3><p>Publicar comparativos e guias para busca orgânica; testar vídeos curtos e redes sociais. Só investir em anúncios pagos após medir cliques, conversões e comissão líquida.</p></div></div></section>
+</main>
+<footer><strong>Achados Inteligentes</strong> · Catálogo inicial de 120 produtos candidatos, distribuídos em quatro categorias.<br>A lista é uma curadoria inicial para validação, não um ranking oficial dos 30 mais vendidos. Antes de publicar cada oferta, confirme procura, preço, avaliações, disponibilidade e comissão real. Produtos de casa e decoração serão priorizados até R$ 100 sempre que possível. Este site não é o Mercado Livre nem a Shopee e não representa oficialmente nenhuma das plataformas. Os botões são demonstrativos até serem substituídos por links de afiliado reais.</footer>
+</div>
+<script>
+const catalog = {
+ casa: {label:'Casa e decoração', icon:'🏠', items:['Organizador de gavetas','Colmeia organizadora de roupas','Kit de cabides finos','Organizador de geladeira','Cestos organizadores multiuso','Prateleira adesiva para banheiro','Suporte para vassouras e rodos','Luminária LED de mesa','Fita LED decorativa','Luz noturna com sensor','Vaso decorativo pequeno','Planta artificial decorativa','Quadro decorativo minimalista','Adesivo de parede','Papel de parede autoadesivo','Capa de almofada','Manta para sofá','Cortina blackout curta','Tapete para banheiro','Tapete para cozinha','Porta-temperos','Potes herméticos para mantimentos','Ganchos adesivos multiuso','Organizador de cabos','Suporte para controle remoto','Porta-escovas de dentes','Dispenser para detergente','Escorredor de pia compacto','Forma de gelo com tampa','Capa protetora para máquina de lavar']},
+ eletronicos: {label:'Eletrônicos e celulares', icon:'📱', items:['iPhone: guia de ofertas por geração','Capinha para iPhone','Película de vidro para iPhone','Cabo USB-C reforçado','Carregador USB-C compacto','Carregador sem fio','Power bank portátil','Fone Bluetooth TWS','Fone Bluetooth estilo esportivo','Headset para jogos','Caixa de som Bluetooth mini','Suporte veicular para celular','Suporte de mesa para celular','Tripé para smartphone','Ring light compacto','Microfone de lapela USB-C','Adaptador USB-C multiportas','Hub USB para computador','Mouse sem fio','Teclado sem fio compacto','Mousepad grande','Webcam USB','Suporte para notebook','Base refrigerada para notebook','Capa para tablet','Caneta touch universal','Smartband de entrada','Smartwatch de entrada','Cartão de memória microSD','Pendrive USB 3.0']},
+ beleza: {label:'Beleza e cuidados', icon:'✨', items:['Necessaire organizadora','Organizador de maquiagem','Espelho de mesa com LED','Pincéis de maquiagem kit','Esponjas para maquiagem','Faixa para skincare','Massageador facial manual','Rolo facial de massagem','Escova desembaraçadora','Pente antiestático','Touca de cetim','Fronha de cetim','Kit de presilhas de cabelo','Elásticos de cabelo kit','Aparador de sobrancelha manual','Lixa elétrica para unhas','Kit de manicure','Lixa de unha kit','Organizador de esmaltes','Bolsa térmica para cosméticos','Escova de limpeza facial','Massageador de couro cabeludo','Frasco spray para cabelo','Pente para barba','Escova para barba','Necessaire masculina','Espelho compacto de bolsa','Rolo removedor de pelos reutilizável','Faixa esportiva para cabelo','Organizador de produtos de skincare']},
+ moda: {label:'Moda e acessórios', icon:'👜', items:['Bolsa transversal casual','Carteira compacta','Porta-cartões minimalista','Cinto casual ajustável','Óculos de sol básico','Relógio casual econômico','Brincos pequenos kit','Colar minimalista','Pulseiras variadas kit','Anéis ajustáveis kit','Boné básico','Bucket hat','Meias esportivas kit','Meias invisíveis kit','Garrafa térmica compacta','Bolsa organizadora de viagem','Necessaire de viagem','Organizador de malas','Etiqueta para bagagem','Capa de chuva compacta','Guarda-chuva dobrável','Luva para academia','Munhequeira esportiva','Faixa elástica de treino','Corda de pular','Squeeze para treino','Pochete esportiva','Bolsa tote reutilizável','Chaveiro personalizado','Porta-moedas compacto']}
+};
+const grid = document.getElementById('productGrid');
+let productId = 0;
+for (const [categoryKey, group] of Object.entries(catalog)) {
+  group.items.forEach((name, index) => {
+    productId++;
+    const slug = `${categoryKey}-${index+1}`;
+    const card = document.createElement('article');
+    card.className = 'card';
+    card.dataset.category = categoryKey;
+    card.dataset.search = `${name} ${group.label}`.toLocaleLowerCase('pt-BR');
+    card.innerHTML = `<div class="productvisual">${group.icon}</div><span class="badge">${group.label} · candidato ${String(index+1).padStart(2,'0')}</span><h3>${name}</h3><p>Produto candidato para pesquisa de preço, procura, avaliações e comissão. ${categoryKey === 'casa' ? 'Prioridade de seleção: até R$ 100.' : 'Preço e comissão serão confirmados antes da publicação.'}</p><a class="cta affiliate-link" href="#ml-${slug}">Ver no Mercado Livre ↗</a><a class="cta affiliate-link" href="#shopee-${slug}" style="margin-top:8px">Ver na Shopee ↗</a>`;
+    grid.appendChild(card);
+  });
+}
+const cards = [...document.querySelectorAll('.card')];
+const filters = [...document.querySelectorAll('.filter')];
+const search = document.getElementById('search');
+let category = 'todos';
+function applyFilters() {
+  const term = search.value.trim().toLocaleLowerCase('pt-BR');
+  let visible = 0;
+  cards.forEach(card => {
+    const categoryMatch = category === 'todos' || card.dataset.category === category;
+    const text = (card.dataset.search + ' ' + card.innerText).toLocaleLowerCase('pt-BR');
+    const searchMatch = !term || text.includes(term);
+    const show = categoryMatch && searchMatch;
+    card.style.display = show ? 'flex' : 'none';
+    if (show) visible++;
+  });
+  document.getElementById('empty').style.display = visible ? 'none' : 'block';
+}
+filters.forEach(btn => btn.addEventListener('click', () => {
+  category = btn.dataset.category;
+  filters.forEach(f => f.classList.toggle('active', f === btn));
+  applyFilters();
+}));
+document.getElementById('searchBtn').addEventListener('click', applyFilters);
+search.addEventListener('input', applyFilters);
+search.addEventListener('keydown', e => { if (e.key === 'Enter') applyFilters(); });
+document.querySelectorAll('.affiliate-link').forEach(link => link.addEventListener('click', e => {
+  if (link.getAttribute('href').startsWith('#')) {
+    e.preventDefault();
+    alert('Link demonstrativo: vamos substituir este botão pelo seu link real de afiliado da plataforma indicada antes de publicar.');
+  }
+}));
+</script>
+</body>
+</html>

@@ -35,6 +35,12 @@ window.ACHADOS_CATALOGO = [
     ],
     "images": [
       {
+        "src": "https://www.rockstargames.com/VI/_next/static/media/Official_Cover_Art_landscape.12.uu2irr.2_a.jpg?akim=1&imdensity=1&imwidth=3840",
+        "alt": "Arte de capa oficial de Grand Theft Auto VI, fornecida pela Rockstar Games",
+        "credit": "Rockstar Games",
+        "source": "https://www.rockstargames.com/VI/media/artwork-wallpapers"
+      },
+      {
         "src": "https://www.rockstargames.com/VI/_next/static/media/Jason_and_Lucia_14.10e7v.06pcm_t.jpg?akim=1&imdensity=1&imwidth=3840",
         "alt": "GTA VI — Jason e Lucia, captura oficial do jogo",
         "credit": "Rockstar Games",
@@ -79,7 +85,11 @@ window.ACHADOS_CATALOGO = [
       "button": "Conhecer GTA 6",
       "heroImage": "https://media-rockstargames-com.akamaized.net/mfe6/prod/__common/img/f7eab33a4989ce5f0cd89c70723909b3.jpg",
       "credit": "Arte oficial: Rockstar Games"
-    }
+    },
+    "coverImage": "https://www.rockstargames.com/VI/_next/static/media/Official_Cover_Art_landscape.12.uu2irr.2_a.jpg?akim=1&imdensity=1&imwidth=3840",
+    "coverAlt": "Arte de capa oficial de Grand Theft Auto VI, fornecida pela Rockstar Games",
+    "coverCredit": "Rockstar Games — arte de capa oficial; não é foto verificada do anúncio do Mercado Livre",
+    "coverSource": "https://www.rockstargames.com/VI/media/artwork-wallpapers"
   },
   {
     "id": "powerbank-10000-001",

@@ -1,9 +1,10 @@
-/* ACHADOS INTELIGENTES — CATÁLOGO INICIAL (20/11/2026)
-   10 produtos cadastrados, apenas um com links de afiliado informados pelo administrador.
-   Os produtos SEM oferta ficam visíveis como "aguardando links", sem botão de compra comissionada.
-   Para incluir nova oferta, insira a URL gerada na conta de afiliado; não use pesquisa genérica como link afiliado.
-   Não há preços em tempo real, validação automática de vendedor, frete ou estoque.
-   Nunca colocar credenciais, tokens ou segredos neste arquivo público. */
+/* Achados Inteligentes — catálogo inicial de 10 itens.
+   Fotos e vídeos: somente materiais oficiais ou autorizados.
+   Imagens de GTA VI: URLs oficiais da galeria pública da Rockstar, atribuídas à editora; verifique termos de reutilização antes de campanhas.
+   Links curtos meli.la e Shopee não fornecem mídia de modo confiável sem APIs e permissões apropriadas.
+   Fotos de outros produtos pendentes de validação; nunca preencher com imagens de versões diferentes.
+   Nenhum preço, comissão ou disponibilidade é obtido automaticamente.
+   Dados públicos; nunca inclua chaves privadas aqui. */
 window.ACHADOS_CATALOGO = [
   {
     "id": "gta-vi-ps5",
@@ -30,6 +31,44 @@ window.ACHADOS_CATALOGO = [
         "url": "https://meli.la/11xMJVi",
         "verification": "pending",
         "note": "Destino do link encurtado não verificado externamente."
+      }
+    ],
+    "images": [
+      {
+        "src": "https://www.rockstargames.com/VI/_next/static/media/Jason_and_Lucia_14.10e7v.06pcm_t.jpg?akim=1&imdensity=1&imwidth=3840",
+        "alt": "GTA VI — Jason e Lucia, captura oficial do jogo",
+        "credit": "Rockstar Games",
+        "source": "https://www.rockstargames.com/VI/media"
+      },
+      {
+        "src": "https://www.rockstargames.com/VI/_next/static/media/Lucia_Caminos_12.0saq9ns-~xj03.jpg?akim=1&imdensity=1&imwidth=3840",
+        "alt": "GTA VI — Lucia Caminos, imagem oficial do jogo",
+        "credit": "Rockstar Games",
+        "source": "https://www.rockstargames.com/VI/media"
+      },
+      {
+        "src": "https://www.rockstargames.com/VI/_next/static/media/Vice_City_27.0d2e~w_r93hmh.jpg?akim=1&imdensity=1&imwidth=3840",
+        "alt": "GTA VI — cenário de Vice City, captura oficial",
+        "credit": "Rockstar Games",
+        "source": "https://www.rockstargames.com/VI/media"
+      },
+      {
+        "src": "https://www.rockstargames.com/VI/_next/static/media/Jason_Lucia_Rooftop_landscape.0c6p5do~-8~7..jpg?akim=1&imdensity=1&imwidth=3840",
+        "alt": "GTA VI — arte oficial de Jason e Lucia na cobertura",
+        "credit": "Rockstar Games",
+        "source": "https://www.rockstargames.com/VI/media"
+      }
+    ],
+    "videos": [
+      {
+        "title": "Clipes oficiais curtos do GTA VI",
+        "url": "https://www.rockstargames.com/VI/media/videos",
+        "credit": "Rockstar Games"
+      },
+      {
+        "title": "GTA VI — An Extended Look (vídeo oficial)",
+        "url": "https://www.youtube.com/watch?v=tJbzMqJGH4k",
+        "credit": "Rockstar Games"
       }
     ]
   },
@@ -60,7 +99,9 @@ window.ACHADOS_CATALOGO = [
         "title": "Mini Power Bank 10000mAh com saídas Tipo-C / Lightning",
         "url": "https://meli.la/1SBFzWk"
       }
-    ]
+    ],
+    "images": [],
+    "videos": []
   },
   {
     "id": "controle-dualsense-ps5",
@@ -76,7 +117,9 @@ window.ACHADOS_CATALOGO = [
       "playstation",
       "jogos"
     ],
-    "offers": []
+    "offers": [],
+    "images": [],
+    "videos": []
   },
   {
     "id": "headset-hyperx-stinger-2",
@@ -91,7 +134,9 @@ window.ACHADOS_CATALOGO = [
       "headset gamer",
       "fone gamer"
     ],
-    "offers": []
+    "offers": [],
+    "images": [],
+    "videos": []
   },
   {
     "id": "fone-qcy-t13-anc",
@@ -107,7 +152,9 @@ window.ACHADOS_CATALOGO = [
       "bluetooth",
       "fone sem fio"
     ],
-    "offers": []
+    "offers": [],
+    "images": [],
+    "videos": []
   },
   {
     "id": "caixa-jbl-go-4",
@@ -122,7 +169,9 @@ window.ACHADOS_CATALOGO = [
       "caixa de som",
       "jbl"
     ],
-    "offers": []
+    "offers": [],
+    "images": [],
+    "videos": []
   },
   {
     "id": "redmi-watch-5-active",
@@ -138,7 +187,9 @@ window.ACHADOS_CATALOGO = [
       "relogio inteligente",
       "xiaomi"
     ],
-    "offers": []
+    "offers": [],
+    "images": [],
+    "videos": []
   },
   {
     "id": "airfryer-mondial-4l",
@@ -154,7 +205,9 @@ window.ACHADOS_CATALOGO = [
       "mondial",
       "4 litros"
     ],
-    "offers": []
+    "offers": [],
+    "images": [],
+    "videos": []
   },
   {
     "id": "aspirador-wap-silent-speed",
@@ -169,7 +222,9 @@ window.ACHADOS_CATALOGO = [
       "aspirador vertical",
       "limpeza"
     ],
-    "offers": []
+    "offers": [],
+    "images": [],
+    "videos": []
   },
   {
     "id": "kit-potes-hermeticos",
@@ -184,6 +239,8 @@ window.ACHADOS_CATALOGO = [
       "organizacao cozinha",
       "potes de mantimentos"
     ],
-    "offers": []
+    "offers": [],
+    "images": [],
+    "videos": []
   }
 ];

@@ -31,6 +31,14 @@ window.ACHADOS_CATALOGO = [
         "url": "https://meli.la/11xMJVi",
         "verification": "pending",
         "note": "Destino do link encurtado não verificado externamente."
+      },
+      {
+        "store": "sp",
+        "label": "Shopee",
+        "title": "GTA VI — anúncio informado pelo responsável; jogo, plataforma e edição a conferir",
+        "url": "https://s.shopee.com.br/7KyhxTzRJX",
+        "verification": "pending",
+        "note": "Link encurtado recebido do administrador, sem confirmação do produto ou atribuição de comissão."
       }
     ],
     "images": [
